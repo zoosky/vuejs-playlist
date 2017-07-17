@@ -3,7 +3,7 @@
         <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
         <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
         <ul>
-          <li v-for="ninja in ninjas">{{ ninja.name }}</li>
+          <li v-for="ninja in ninjas"  v-bind:key="ninja.id">{{ ninja.name }}</li>
         </ul>
         <app-footer v-bind:title="title"></app-footer>
     </div>
